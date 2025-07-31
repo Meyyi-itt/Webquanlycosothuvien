@@ -1,0 +1,65 @@
+/* map.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.chi-tiet-thu-vien {
+    max-width: 700px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    line-height: 1.6;
+}
+
+.chi-tiet-thu-vien h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.chi-tiet-thu-vien p {
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 8px 12px;
+    background: #f9f9f9;
+    border-left: 4px solid #d4b5ff;
+    border-radius: 4px;
+}
+
+.chi-tiet-thu-vien strong {
+    color: #34495e;
+}
+
+.nut-quay-lai,
+.nut-xem-sach {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 5px 20px 0;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #d4b5ff;
+    color: #fff;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.nut-quay-lai:hover,
+.nut-xem-sach:hover {
+    background-color: #d4b5ff;
+}
+
+img {
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    display: block;
+    max-width: 100%;
+}
