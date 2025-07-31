@@ -4,7 +4,7 @@ session_start();
 require_once 'config.php';
 
 if (!isset($_SESSION['user_id']) || $_SESSION['vai_tro'] !== 'Quan_ly') {
-    header('Location: login.php'); // Chuyển hướng nếu không có quyền
+    header('Location: login.php');
     exit;
 }
 
