@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #fef9f4, #e7f0ff);
+  color: #333;
+  line-height: 1.5;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Bản đồ */
+#ban-do {
+  height: calc(100vh - 80px);
+  width: 95%;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 2px solid #eaeaea;
+}
+
+/* Thanh tìm kiếm */
+#thanh-tim-kiem {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-width: 800px;
+  width: 90%;
+}
+
+#tim-kiem-chinh {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+#tim-kiem-chinh:focus {
+  border-color: #a491ff;
+}
+
+#thanh-tim-kiem button,
+#bo-loc-modal button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #a491ff, #d4b5ff);
+  color: #fff;
+  transition: background 0.3s;
+}
+
+#thanh-tim-kiem button:hover,
+#bo-loc-modal button:hover {
+  background: linear-gradient(135deg, #9179f2, #c9a3f2);
+}
+
+/* Modal lọc */
+#bo-loc-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffffee;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  z-index: 1001;
+  max-width: 400px;
+  width: 90%;
+  backdrop-filter: blur(6px);
+}
+
+#bo-loc-modal h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #4b3f72;
+}
+
+#bo-loc-modal label {
+  display: block;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+#bo-loc-modal input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#bo-loc-modal input[type="text"]:focus {
+  border-color: #a491ff;
+}
+
+#bo-loc-modal input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #a491ff;
+}
+
+#ap-dung-bo-loc {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#dong-bo-loc {
+  background: #f8f8ff;
+  color: #4b3f72;
+  width: 100%;
+  margin-top: 8px;
+}
+
+#dong-bo-loc:hover {
+  background: #e2d7ff;
+}
+
+/* Lớp phủ mờ phía sau modal */
+#lop-phu-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+/* Danh sách sách */
+.danh-sach-sach {
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.danh-sach-sach h3 {
+  font-size: 18px;
+  color: #4b3f72;
+  margin-bottom: 15px;
+}
+
+.danh-sach-sach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.sach-moi {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.sach-moi img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.khong-anh {
+  background: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.thong-tin-sach p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Chi tiết thư viện */
+.chi-tiet-thu-vien {
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chi-tiet-thu-vien h3 {
+  font-size: 18px;
+  color: #4b3f72;
+  margin-bottom: 15px;
+}
+
+.chi-tiet-thu-vien p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Nút điều hướng */
+.nut-quay-lai,
+.nut-xem-sach {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #a491ff, #d4b5ff);
+  color: #fff;
+}
+
+.nut-quay-lai:hover,
+.nut-xem-sach:hover {
+  background: linear-gradient(135deg, #9179f2, #c9a3f2);
+}
+
+/* Panorama */
+.panorama-container {
+  width: 100%;
+  height: 200px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #thanh-tim-kiem {
+    flex-direction: column;
+    width: 95%;
+    padding: 8px;
+  }
+
+  #tim-kiem-chinh,
+  #thanh-tim-kiem button {
+    width: 100%;
+  }
+
+  .danh-sach-sach-grid {
+    grid-template-columns: 1fr;
+  }
+}
