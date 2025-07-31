@@ -92,13 +92,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_sach'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sửa sách trong thư viện</title>
+    <link rel="stylesheet" href="./css/sachtv-style.css">
 </head>
 <body>
     <div class="admin-nav">
+        <a href="admin.php">Trang chủ</a>
         <a href="thu_vien.php">Thư viện</a>
         <a href="the_loai.php">Thể loại sách trong thư viện</a>
         <a href="sach_chung.php">Sách</a>
-        <a href="sachtv.php">Sách trong thư viện</a>
         <a href="logout.php" class="logout">Đăng xuất</a>
     </div>
     <div class="container">
@@ -149,11 +150,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_sach'])) {
                     <input type="number" id="tongsl" name="tongsl" min="0" value="<?php echo htmlspecialchars($book['tongsl'] ?? (isset($_POST['tongsl']) ? $_POST['tongsl'] : '0')); ?>" required>
                 </div>
                 <button type="submit" class="btn btn-save">Lưu</button>
-                <a href="sachtv.php<?php echo $id_thuvien > 0 ? '?id_thuvien=' . $id_thuvien : ''; ?>" class="btn btn-back">Quay lại</a>
+                <a href="sachtv.php" class="btn btn-back">Quay lại</a>
             </form>
         <?php else: ?>
             <p>Không tìm thấy sách.</p>
-            <a href="sachtv.php<?php echo $id_thuvien > 0 ? '?id_thuvien=' . $id_thuvien : ''; ?>" class="btn btn-back">Quay lại</a>
+            <a href="sachtv.php" class="btn btn-back">Quay lại</a>
         <?php endif; ?>
     </div>
 </body>

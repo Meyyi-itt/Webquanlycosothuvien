@@ -128,13 +128,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_sach'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý sách trong thư viện<?php echo $id_thuvien > 0 ? ' - ' . htmlspecialchars($ten_thuvien) : ''; ?></title>
+    <link rel="stylesheet" href="./css/sachtv-style.css">
 </head>
 <body>
     <div class="admin-nav">
+        <a href="admin.php">Trang chủ</a>
         <a href="thu_vien.php">Thư viện</a>
         <a href="the_loai.php">Thể loại sách trong thư viện</a>
         <a href="sach_chung.php">Sách</a>
-        <a href="sachtv.php">Sách trong thư viện</a>
         <a href="logout.php" class="logout">Đăng xuất</a>
     </div>
     <h2>Quản lý sách trong thư viện<?php echo $id_thuvien > 0 ? ' - ' . htmlspecialchars($ten_thuvien) : ''; ?></h2>
